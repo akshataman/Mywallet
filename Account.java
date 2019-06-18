@@ -1,6 +1,6 @@
 package com.cg.bean;
 
-public class Account {
+public abstract class Account {
 	
 
 	private int aid;
@@ -51,10 +51,4 @@ public class Account {
 		return "Account [aid=" + aid + ", mobile=" + mobile + ", accountholder=" + accountholder + ", balance="
 				+ balance + "]";
 	}
-	
-	public double withdraw (double amount) {
-		balance-=amount;
-		return balance;
-	}
-	
 }

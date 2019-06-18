@@ -1,8 +1,8 @@
 package com.cg.bean;
 
-public class SavingAccount extends Account{
+public class SavingAccount extends Account {
 	private double interest;
-	private final double MIN_BALANCE=1000.00;
+	//private final double MIN_BALANCE=1000.00;
 	public SavingAccount() {
 		// TODO Auto-generated constructor stub
 	}
@@ -19,18 +19,6 @@ public class SavingAccount extends Account{
 	@Override
 	public String toString() {
 		return super.toString()+" SavingAccount [interest=" + interest + "]" ;
-	}
-	@Override
-	public double withdraw(double amount) {
-		// TODO Auto-generated method stub
-		
-		double new_balance=super.getBalance()-amount;
-		if(new_balance<MIN_BALANCE) {
-			new_balance=super.getBalance();
-			System.out.println("Insufficient Balance");
-		}
-		super.setBalance(new_balance);
-		return new_balance;
 	}
 	
 	
